@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <p id="my-library">My Library</p>
+        <button id="new-book">+ NEW BOOK</button>
+        <button id="sample-books">+ SAMPLE BOOKS</button>  
+    </div>
+    <div id="bookshelf">
+
+    </div>
+    <div id="overlay"><form id="form">
+        <button id="X">x</button>
+        <legend>Add a New Book</legend>
+        <div class="field">
+            <label for="title"><span style="color:coral">*</span>Title</label>
+            <input class="text-input" type="text" id="title" name="title" autocomplete="off" required>
+        </div>
+        <div class="field">
+            <label for="author">Author</label>
+            <input class="text-input" type="text" id="author" autocomplete="off" name="author">
+        </div>
+        <div class="field">
+            <label for="pages">Pages</label>
+            <input class="text-input" type="number" id="pages" autocomplete="off" name="pages">
+        </div>
+        <div class="field read-yet">
+            <label for="read">Read it yet?</label>
+            <input class="checkbox-input" type="checkbox" id="read" name="read">
+        </div>
+        <button type="submit">ADD BOOK</button>
+    </form></div>
+</body>
+<script src="main.js"></script>
+</html>
