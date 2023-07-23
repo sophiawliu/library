@@ -81,7 +81,7 @@ body {
     font-size: 25px;
     padding: 0 0;
 }
-.title {
+#book-title {
     font-family: "Space Mono Bold";
     font-size: 18px;
     margin: 0 0;

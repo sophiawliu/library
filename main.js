@@ -36,7 +36,7 @@ function addBookToLibrary() {
         let card = document.createElement('div');
         card.setAttribute('id', 'card');
         let title = document.createElement('p');
-        title.setAttribute('class', 'title');
+        title.setAttribute('id', 'book-title');
         let author = document.createElement('p');
         author.setAttribute('id', 'author-pages-read');
         let pages = document.createElement('p');
@@ -82,9 +82,17 @@ function updateReadStatus(card) {
     if (readOrNotRead === 'Not read yet') {
         readYet.innerText = 'Read';
         readYet.style = "color: green; -webkit-user-select: none; -ms-user-select: none; user-select: none;";
+        // update read status of book object
+        let children = card.children;
+        displayedLibrary.find(book => book.title === children.item(1).innerText).read = true;
+        // myLibrary.find(book => book.title === children.item(1).innerText).read = true;
     } else {
         readYet.innerText = 'Not read yet';
         readYet.style = "color: coral; -webkit-user-select: none; -ms-user-select: none; user-select: none;"
+        // update read status of book object
+        let children = card.children;
+        displayedLibrary.find(book => book.title === children.item(1).innerText).read = false;
+        // myLibrary.find(book => book.title === children.item(1).innerText).read = false;
     }
     card.appendChild(readYet);
 }
