@@ -16,6 +16,11 @@
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
+body {
+    font-family: "Space Mono";
+    margin: 10vh 6vh 10vh 6vh;
+}
+
 #header {
     display: flex;
     justify-content: flex-start;
@@ -46,9 +51,8 @@ button {
     border: 2px solid cadetblue;
     color: cadetblue;
 }
-body {
-    font-family: "Space Mono";
-    margin: 10vh 6vh 10vh 6vh;
+#instructions {
+    font-size: 18px;
 }
 
 #bookshelf {
