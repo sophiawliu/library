@@ -18,7 +18,7 @@ function Book(title, author, pages, read) {
 // test books
 const onTheRoad = new Book("On the Road", "Jack Kerouac", 320, true);
 const slouchingTowardBethlehem = new Book("Slouching Toward Bethlehem", "Joan Didion", 238, true);
-const steppenwolf = new Book("Steppenwolf", "Herman Hesse", 237, false);
+const steppenwolf = new Book("Steppenwolf", "Hermann Hesse", 237, false);
 const fearAndLoathing = new Book("Fear and Loathing in Las Vegas", "Hunter S. Thompson", 204, true);
 const orangesOf = new Book("Big Sur and the Oranges of Hieronymus Bosch", "Henry Miller", 404, false);
 let sampleBooksLibrary = [onTheRoad, slouchingTowardBethlehem, steppenwolf, fearAndLoathing, orangesOf];
@@ -54,7 +54,7 @@ function addBookToLibrary() {
         author.innerText = book.author;
         if (parseInt(book.pages) == 1) {
             pages.innerText = book.pages + " page";
-        } else {
+        } else if (parseInt(book.pages) > 1) {
             pages.innerText = book.pages + " pages";
         }
         if (book.read) {
