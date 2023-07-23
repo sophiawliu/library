@@ -81,10 +81,10 @@ function updateReadStatus(card) {
     readYet.setAttribute('id', 'read');
     if (readOrNotRead === 'Not read yet') {
         readYet.innerText = 'Read';
-        readYet.style = "color: green";
+        readYet.style = "color: green; -webkit-user-select: none; -ms-user-select: none; user-select: none;";
     } else {
         readYet.innerText = 'Not read yet';
-        readYet.style = "color: coral"
+        readYet.style = "color: coral; -webkit-user-select: none; -ms-user-select: none; user-select: none;"
     }
     card.appendChild(readYet);
 }
@@ -150,16 +150,15 @@ const sampleBooksButton = document.querySelector('#sample-books');
 sampleBooksButton.addEventListener('click', addSampleBooks);
 function addSampleBooks() {
     if (sampleBooksOn) { // turn off
-        displayedLibrary = myLibrary;
+        displayedLibrary = myLibrary.slice(); // copy of myLibrary rather than reference to object!
         addBookToLibrary();
         sampleBooksOn = false;
-        sampleBooksButton.style = "margin-left: 10px; background-color: white; border: 2px solid cadetblue; color: cadetblue;";
-        return;
+        sampleBooksButton.style = "background-color: white; border: 2px solid cadetblue; color: cadetblue;";
     } else { // turn on
-        displayedLibrary = sampleBooksLibrary.concat(myLibrary);
+        displayedLibrary = myLibrary.concat(sampleBooksLibrary);
         addBookToLibrary();
         sampleBooksOn = true;
-        sampleBooksButton.style = "margin-left: 10px; background-color: cadetblue; color: white;";
+        sampleBooksButton.style = "background-color: cadetblue; color: white;";
     }
 }
 
