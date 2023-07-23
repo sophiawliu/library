@@ -23,7 +23,7 @@ const fearAndLoathing = new Book("Fear and Loathing in Las Vegas", "Hunter S. Th
 const longValley = new Book("The Long Valley", "John Steinbeck", 272, true);
 const orangesOf = new Book("Big Sur and the Oranges of Hieronymus Bosch", "Henry Miller", 404, false);
 const eastOfEden = new Book("East of Eden", "John Steinbeck", 704, true);
-let sampleBooksLibrary = [onTheRoad, slouchingTowardBethlehem, fearAndLoathing, longValley, eastOfEden, steppenwolf, orangesOf];
+let sampleBooksLibrary = [onTheRoad, slouchingTowardBethlehem, eastOfEden, fearAndLoathing, longValley, steppenwolf, orangesOf];
 
 let myLibrary = [];
 let displayedLibrary = [];

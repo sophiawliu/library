@@ -18,7 +18,7 @@
 }
 body {
     font-family: "Space Mono";
-    margin: 8vh 6vh 10vh 6vh;
+    margin: 8vh 4vh 8vh 8vh;
 }
 
 #header {
@@ -41,10 +41,9 @@ button {
     background-color: cornflowerblue;
     border-radius: 50px;
     color: white;
-    padding: 5px 25px;
+    padding: 5px 18px;
     font-size: 18px;
     top: 5px;
-    margin-right: 5px;
 }
 #buttons {
     margin-top: 5px;
@@ -223,4 +222,119 @@ input[type=number] {
     color: #24292F;
     font-size: 16px;
     text-decoration: none;
+}
+
+
+/* phone margins */
+@media (min-width:320px)  {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    body{
+        margin: 8vh 3vh 8vh 3vh;
+    }
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+    button {
+        font-size: 18px;
+    }
+    #buttons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    #my-library {
+        width: 100%;
+        font-size: 48;
+        margin: 0 0;
+        text-align: center;
+    }
+    #title-buttons {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 0;
+    }
+    #instructions {
+        font-size: 18px;
+        margin: 16px 0 0 0;
+        text-align: center;
+    }
+
+    #bookshelf {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+    #card {
+        width: 100%;
+    }
+    #book-title {
+        font-family: "Space Mono Bold";
+        font-size: 18px;
+        margin: 0 0;
+        margin-bottom: 5px;
+    }
+    #author-pages-read {
+        margin: 0 0;
+        /* prevent highlight */
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        width: 300px;
+        height: 480px;
+        background-color: white;
+        padding: 5px 40px 40px 40px;
+        border-radius: 12px;
+    }
+    legend {
+        font-family: "Space Mono Bold";
+        font-size: 32px;
+        font-weight: 2000;
+        margin: 40px 0 10px 0;
+    }
+}
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+    body {
+        font-family: "Space Mono";
+        margin: 8vh 4vh 8vh 8vh;
+    }
+}
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+    body {
+        font-family: "Space Mono";
+        margin: 8vh 4vh 8vh 8vh;
+    }
+}
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    body {
+        font-family: "Space Mono";
+        margin: 8vh 4vh 8vh 8vh;
+    }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+    body {
+        font-family: "Space Mono";
+        margin: 8vh 4vh 8vh 8vh;
+    }
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+    body {
+        font-family: "Space Mono";
+        margin: 8vh 4vh 8vh 8vh;
+    }
 }
