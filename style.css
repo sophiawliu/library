@@ -10,6 +10,7 @@
     font-family: "Space Mono Italic";
     src: url(SpaceMono-Italic.ttf);
 }
+
 /* disable double tap */
 * {
     -ms-touch-action: manipulation;
@@ -38,7 +39,7 @@ button {
     padding: 5px 20px;
     font-size: 18px;
     top: 5px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 #sample-books {
     background-color: white;
@@ -58,7 +59,7 @@ body {
 #card {
     border-radius: 12px;
     background-color: aliceblue;
-    padding: 25px 50px 25px 25px;
+    padding: 25px 40px 25px 25px;
     position: relative;
 }
 #card:hover {
@@ -184,4 +185,27 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@font-face {
+    font-family: "Peralta";
+    src: url(Peralta-Regular.ttf);
+}
+.footer {
+    display: flex;
+    gap: 3px;
+    position:fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+#github {
+    height: 20px;
+}
+#sophiawliu {
+    font-family: "Peralta";
+    color: #24292F;
+    font-size: 16px;
+    text-decoration: none;
 }
