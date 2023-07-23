@@ -20,8 +20,10 @@ const onTheRoad = new Book("On the Road", "Jack Kerouac", 320, true);
 const slouchingTowardBethlehem = new Book("Slouching Toward Bethlehem", "Joan Didion", 238, true);
 const steppenwolf = new Book("Steppenwolf", "Hermann Hesse", 237, false);
 const fearAndLoathing = new Book("Fear and Loathing in Las Vegas", "Hunter S. Thompson", 204, true);
+const longValley = new Book("The Long Valley", "John Steinbeck", 272, true);
 const orangesOf = new Book("Big Sur and the Oranges of Hieronymus Bosch", "Henry Miller", 404, false);
-let sampleBooksLibrary = [onTheRoad, slouchingTowardBethlehem, steppenwolf, fearAndLoathing, orangesOf];
+const eastOfEden = new Book("East of Eden", "John Steinbeck", 704, true);
+let sampleBooksLibrary = [onTheRoad, slouchingTowardBethlehem, fearAndLoathing, steppenwolf, longValley, eastOfEden, orangesOf];
 
 let myLibrary = [];
 let displayedLibrary = [];
