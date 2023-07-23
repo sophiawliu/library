@@ -10,6 +10,11 @@
     font-family: "Space Mono Italic";
     src: url(SpaceMono-Italic.ttf);
 }
+/* disable double tap */
+* {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
 #header {
     display: flex;
     justify-content: flex-start;
@@ -115,7 +120,7 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
-    width: 400px;
+    width: 350px;
     height: 500px;
     background-color: white;
     padding: 5px 40px 40px 40px;
