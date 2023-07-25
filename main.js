@@ -154,12 +154,8 @@ function deleteBook(e) {
     const indexMy = myLibrary.indexOf(e.target.parentNode);
     const indexDisplayed = bookshelfCards.indexOf(e.target.parentNode);
     myLibrary.splice(indexMy, 1);
+    displayedLibrary.splice(indexDisplayed, 1); // should match bookshelf
     bookshelfCards.splice(indexDisplayed, 1);
-    // displayedLibrary.splice(indexDisplayed, 1);
-    // displayedLibrary.forEach(book => {
-    //     console.log(book.title)
-    // });
-    // console.log(displayedLibrary)
 }
 
 
@@ -180,8 +176,3 @@ function addSampleBooks() {
         sampleBooksButton.style = "background-color: cadetblue; color: white;";
     }
 }
-
-
-
-
-// validate input: pages must be a number
