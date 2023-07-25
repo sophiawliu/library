@@ -27,6 +27,7 @@ let sampleBooksLibrary = [onTheRoad, slouchingTowardsBethlehem, eastOfEden, fear
 
 let myLibrary = [];
 let displayedLibrary = [];
+let bookshelfCards = [];
 
 const bookshelf = document.querySelector('#bookshelf');
 
@@ -71,6 +72,7 @@ function addBookToLibrary() {
         card.appendChild(pages);
         card.appendChild(read);
         bookshelf.appendChild(card);
+        bookshelfCards.push(card);
     });
 }
 
@@ -149,9 +151,15 @@ document.body.addEventListener('click', function (e) {
 function deleteBook(e) {
     bookshelf.removeChild(e.target.parentNode);
     // remove book from myLibrary array
-    const index = myLibrary.indexOf(e.target.parentNode);
-    myLibrary.splice(index, 1);
-    displayedLibrary.splice(index, 1);
+    const indexMy = myLibrary.indexOf(e.target.parentNode);
+    const indexDisplayed = bookshelfCards.indexOf(e.target.parentNode);
+    myLibrary.splice(indexMy, 1);
+    bookshelfCards.splice(indexDisplayed, 1);
+    // displayedLibrary.splice(indexDisplayed, 1);
+    // displayedLibrary.forEach(book => {
+    //     console.log(book.title)
+    // });
+    // console.log(displayedLibrary)
 }
 
 
