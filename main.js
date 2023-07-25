@@ -17,13 +17,13 @@ function Book(title, author, pages, read) {
 
 // test books
 const onTheRoad = new Book("On the Road", "Jack Kerouac", 320, true);
-const slouchingTowardBethlehem = new Book("Slouching Toward Bethlehem", "Joan Didion", 238, true);
+const slouchingTowardsBethlehem = new Book("Slouching Towards Bethlehem", "Joan Didion", 238, true);
 const steppenwolf = new Book("Steppenwolf", "Hermann Hesse", 237, false);
 const fearAndLoathing = new Book("Fear and Loathing in Las Vegas", "Hunter S. Thompson", 204, true);
 const longValley = new Book("The Long Valley", "John Steinbeck", 272, true);
 const orangesOf = new Book("Big Sur and the Oranges of Hieronymus Bosch", "Henry Miller", 404, false);
 const eastOfEden = new Book("East of Eden", "John Steinbeck", 704, true);
-let sampleBooksLibrary = [onTheRoad, slouchingTowardBethlehem, eastOfEden, fearAndLoathing, longValley, steppenwolf, orangesOf];
+let sampleBooksLibrary = [onTheRoad, slouchingTowardsBethlehem, eastOfEden, fearAndLoathing, longValley, steppenwolf, orangesOf];
 
 let myLibrary = [];
 let displayedLibrary = [];
@@ -151,6 +151,7 @@ function deleteBook(e) {
     // remove book from myLibrary array
     const index = myLibrary.indexOf(e.target.parentNode);
     myLibrary.splice(index, 1);
+    displayedLibrary.splice(index, 1);
 }
 
 
